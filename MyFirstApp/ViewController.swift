@@ -28,7 +28,12 @@ class ViewController: UIViewController {
         thisLabel.text = "\(a!+1)"
     }
     
-
+    @IBAction func decreaseText(_ sender: Any) {
+        let a:Int? = Int(thisLabel.text!)
+        thisLabel.text = "\(a!-1)"
+    }
+    
+    
 }
 
 

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2c-we-xhb">
-                                <rect key="frame" x="137.5" y="351" width="100" height="30"/>
+                                <rect key="frame" x="16" y="351" width="100" height="30"/>
                                 <state key="normal" title="Increase Value"/>
                                 <connections>
                                     <action selector="changeText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sIh-Ze-D8V"/>
@@ -31,13 +32,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWb-GR-MHu">
+                                <rect key="frame" x="252" y="351" width="107" height="30"/>
+                                <state key="normal" title="Decrease Value"/>
+                                <connections>
+                                    <action selector="decreaseText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I4u-Ic-aS4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Px6-pd-b4h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="260" id="MrE-Hr-vOS"/>
-                            <constraint firstItem="n2c-we-xhb" firstAttribute="top" secondItem="Px6-pd-b4h" secondAttribute="bottom" constant="50" id="mMt-Fz-nuu"/>
-                            <constraint firstItem="Px6-pd-b4h" firstAttribute="centerX" secondItem="n2c-we-xhb" secondAttribute="centerX" id="pfd-Ok-zpn"/>
-                            <constraint firstItem="Px6-pd-b4h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yAI-wp-Ibc"/>
+                            <constraint firstItem="LWb-GR-MHu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2WR-Vt-sjr"/>
+                            <constraint firstItem="n2c-we-xhb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="331" id="50K-lo-wHV"/>
+                            <constraint firstItem="Px6-pd-b4h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EBm-Vr-iTE"/>
+                            <constraint firstItem="n2c-we-xhb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hDa-LD-Fz1"/>
+                            <constraint firstItem="n2c-we-xhb" firstAttribute="baseline" secondItem="LWb-GR-MHu" secondAttribute="baseline" id="hSO-f5-PPz"/>
+                            <constraint firstItem="Px6-pd-b4h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="260" id="quE-5c-nV3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
