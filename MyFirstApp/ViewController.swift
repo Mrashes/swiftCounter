@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var thisLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +20,16 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
+
+    @IBAction func changeText(_ sender: Any) {
+        let a:Int? = Int(thisLabel.text!)
+        thisLabel.text = "\(a!+1)"
+    }
+    
 
 }
+
+
 
