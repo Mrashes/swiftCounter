@@ -21,19 +21,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-
-    @IBAction func changeText(_ sender: Any) {
-        let a:Int? = Int(thisLabel.text!)
-        thisLabel.text = "\(a!+1)"
+    @IBOutlet weak var stepperAsOutlet: UIStepper!
+    
+    @IBAction func stepperObject(_ sender: UIStepper) {
+        thisLabel.text = Int(sender.value).description
     }
     
-    @IBAction func decreaseText(_ sender: Any) {
-        let a:Int? = Int(thisLabel.text!)
-        thisLabel.text = "\(a!-1)"
+    @IBAction func resetButton(_ sender: UIBarButtonItem) {
+        stepperAsOutlet.value = 0
+        thisLabel.text = Int(stepperAsOutlet.value).description
     }
     
-    
+    @IBAction func goToMax(_ sender: UIBarButtonItem) {
+        stepperAsOutlet.value = stepperAsOutlet.maximumValue
+        thisLabel.text = Int(stepperAsOutlet.value).description
+    }
 }
 
 
